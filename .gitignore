@@ -57,3 +57,6 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+
+# Visual Studio Configuration file
+.vsconfig
