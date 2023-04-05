@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameControllerScript : MonoBehaviour
 {
@@ -49,11 +48,6 @@ public class GameControllerScript : MonoBehaviour
     {
         currrentScoreText.SetText(playerScore.ToString());
         finalScoreText.SetText("Final Score: " + playerScore.ToString());
-    }
-
-    public void PlayAgain()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void GameOver()
