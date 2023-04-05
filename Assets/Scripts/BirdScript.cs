@@ -25,7 +25,7 @@ public class BirdScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ListenMouse0Input();
+        ListenFlapInput();
         DoAudioCheck();
         AdjustAngle();
         CheckOutOfBounds();
@@ -40,9 +40,9 @@ public class BirdScript : MonoBehaviour
         }
     }
 
-    private void ListenMouse0Input()
+    private void ListenFlapInput()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !gameController.gameOver)
+        if ((Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space)) && !gameController.gameOver)
         {
             birdRigidbody.velocity = Vector2.up * gameController.birdFlapStrength;
             PlayFlapAudio();
